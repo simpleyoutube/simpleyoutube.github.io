@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <meta charset="UTF-8">
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let target = params.get("go");
+
+    function isValidUrl(url) {
+      try {
+        new URL(url);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    if (target && isValidUrl(target)) {
+      // Optional delay (makes it look more legit)
+      setTimeout(() => {
+        window.location.href = target;
+      }, 800);
+    } else {
+      // fallback if no valid link
+      document.body.innerHTML = "<h2>Invalid or missing link</h2>";
+    }
+  </script>
+
+  <style>
+    body {
+      background: #0f0f0f;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecting... ⏳</h1>
+</body>
+</html>
