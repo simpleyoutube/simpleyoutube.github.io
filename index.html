@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirecting...</title>
   <meta charset="UTF-8">
+  <title>Redirecting...</title>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    let target = params.get("go");
+    // 🔗 Your target link
+    const target = "https://rosalie-scaphocephalic-kristel.ngrok-free.dev/";
 
-    function isValidUrl(url) {
-      try {
-        new URL(url);
-        return true;
-      } catch {
-        return false;
-      }
-    }
-
-    if (target && isValidUrl(target)) {
-      // Instant redirect
-      window.location.href = target;
-    } else {
-      // fallback if no valid link
-      document.body.innerHTML = "<h2>Invalid or missing link</h2>";
-    }
+    // Instant redirect (no delay, no back button)
+    window.location.replace(target);
   </script>
 
   <style>
