@@ -4,27 +4,16 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
 
-  <script>
-    // 🔗 Your target link
-    const target = "https://rosalie-scaphocephalic-kristel.ngrok-free.dev/";
-
-    // Instant redirect (no delay, no back button)
-    window.location.replace(target);
-  </script>
-
-  <style>
-    body {
-      background: #0f0f0f;
-      color: white;
-      font-family: Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-  </style>
+  <!-- 🔥 Force instant redirect -->
+  <meta http-equiv="refresh" content="0; url=https://rosalie-scaphocephalic-kristel.ngrok-free.dev/">
 </head>
-<body>
+
+<body style="background:#0f0f0f;color:white;font-family:Arial;display:flex;justify-content:center;align-items:center;height:100vh;">
   <h1>Redirecting... ⏳</h1>
+
+  <script>
+    // Backup redirect (in case meta fails)
+    window.location.href = "https://rosalie-scaphocephalic-kristel.ngrok-free.dev/";
+  </script>
 </body>
 </html>
